@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+GIT_DIR=`git rev-parse --show-toplevel`
+
+echo "Building deploy builder container"
+docker build ${GIT_DIR} -t slai:latest

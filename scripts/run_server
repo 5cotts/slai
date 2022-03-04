@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+GIT_DIR=`git rev-parse --show-toplevel`
+
+docker run -p 8888:8888 -v ${GIT_DIR}/app/notebooks:/app/notebooks slai:latest
